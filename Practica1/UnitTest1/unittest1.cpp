@@ -33,5 +33,11 @@ namespace UnitTest1
 
 		}
 
+		TEST_METHOD(testClassString)
+		{
+
+
+		}
+
 	};
 }

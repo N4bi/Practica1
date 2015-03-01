@@ -11,8 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{796B4FAD-7850-4445-9A5A-90751D96E770}</ProjectGuid>
-    <RootNamespace>Practica1</RootNamespace>
+    <ProjectGuid>{5E546DEC-E468-43E2-9843-933E8A589678}</ProjectGuid>
+    <RootNamespace>ClassString</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -66,11 +66,9 @@
   <ItemGroup>
     <ClCompile Include="ClassString.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Point2D.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ClassString.h" />
-    <ClInclude Include="Point2D.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
