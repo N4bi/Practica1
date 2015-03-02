@@ -72,6 +72,9 @@
     <ClInclude Include="ClassString.h" />
     <ClInclude Include="Point2D.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\..\PROGRAMACION2\20.02.15\Classe Punto\CodeStyle.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

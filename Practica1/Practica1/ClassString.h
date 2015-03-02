@@ -2,7 +2,7 @@
 #define __ClassString_H__
 #define TMP_STRING_SIZE 4096
 
-class p2String
+class P2String
 {
 private:
 	char* string;
@@ -14,15 +14,14 @@ public:
 	// Constructors
 	///////////////////////
 
-	p2String();
-	p2String(const char* a);
-	p2String(const char* format, ...);
+	P2String();
+	P2String(const char* a);
 
 	///////////////////////
 	// Destructor
 	///////////////////////
 
-	~p2String();
+	~P2String();
 
 	///////////////////////
 	// Operators
@@ -30,12 +29,12 @@ public:
 	
 	bool operator == (const char* a) const;
 	bool operator != (const char* a);
-	bool operator == (const p2String &a) const;
-	bool operator != (const p2String &a);
-	const p2String& operator = (const char* a);
-	const p2String& operator = (const p2String &a);
-	p2String& operator += (const char* a);          //////////////
-	p2String& operator += (const p2String &a);     //////////////
+	bool operator == (const P2String &a) const;
+	bool operator != (const P2String &a);
+	const P2String& operator = (const char* a);
+	const P2String& operator = (const P2String &a);
+	P2String& operator += (const char* a);          //////////////
+	P2String& operator += (const P2String &a);     //////////////
 
 	///////////////////////
 	// Functions

@@ -7,14 +7,14 @@
 // Constructors
 ///////////////////////
 
-p2String::p2String()
+P2String::P2String()
 {
 	memLen = 1;
 	string = new char[memLen];
 	string[0] = '\0';
 }
 
-p2String::p2String(const char* a)
+P2String::P2String(const char* a)
 {
 	memLen = strlen(a) + 1;
 	string = new char[memLen];
@@ -22,16 +22,12 @@ p2String::p2String(const char* a)
 	
 }
 
-p2String::p2String(const char* format, ...)
-{
-
-}
 
 ///////////////////////
 // Destructor
 ///////////////////////
 
-p2String::~p2String()
+P2String::~P2String()
 {
 	delete[] string;
 }
@@ -40,7 +36,7 @@ p2String::~p2String()
 // Operators
 ///////////////////////
 
-bool p2String::operator == (const char* a) const
+bool P2String::operator == (const char* a) const
 {
 	if (string != NULL)
 		return strcmp(string, a) == 0;
@@ -48,24 +44,24 @@ bool p2String::operator == (const char* a) const
 
 }
 
-bool p2String::operator != (const char* a)
+bool P2String::operator != (const char* a)
 {
 	if (string != NULL)
 		return strcmp(string, a) != 0;
 	return true;
 }
 
-bool p2String::operator == (const p2String &a) const
+bool P2String::operator == (const P2String &a) const
 {
 	return(a.string, string) == 0;
 }
 
-bool p2String::operator != (const p2String &a)
+bool P2String::operator != (const P2String &a)
 {
 	return(a.string, string) != 0;
 }
 
-const p2String& p2String::operator = (const char* a)
+const P2String& P2String::operator = (const char* a)
 {
 	if (string != NULL)
 	{
@@ -76,7 +72,7 @@ const p2String& p2String::operator = (const char* a)
 			string = new char[memLen];
 		}
 		else
-			clear();
+		clear();
 		strcpy_s(string, memLen, a);
 	}
 	else
@@ -87,7 +83,7 @@ const p2String& p2String::operator = (const char* a)
 
 }
 
-const  p2String& p2String::operator = (const p2String &a)
+const  P2String& P2String::operator = (const P2String &a)
 {
 	if (a.length() + 1 > memLen)
 	{
@@ -102,7 +98,7 @@ const  p2String& p2String::operator = (const p2String &a)
 
 }
 
-/*p2String& p2String::operator += (const char* a)
+/*P2String& P2String::operator += (const char* a)
 {
 	if (string != NULL)
 	{
@@ -110,7 +106,7 @@ const  p2String& p2String::operator = (const p2String &a)
 	}
 }*/
 
-/*p2String& p2String::operator += (const p2String &a)
+/*P2String& P2String::operator += (const P2String &a)
 {
 
 }*/
@@ -119,17 +115,17 @@ const  p2String& p2String::operator = (const p2String &a)
 // Functions
 ///////////////////////
 
-unsigned int p2String::length() const
+unsigned int P2String::length() const
 {
 	return strlen(string);
 }
 
-unsigned int p2String::capacity() const
+unsigned int P2String::capacity() const
 {
 	return(TMP_STRING_SIZE);
 }
 
-void p2String::clear()
+void P2String::clear()
 {
 	if (string != NULL)
 	{
