@@ -29,7 +29,7 @@ public:
 	
 	bool operator == (const char* a) const;
 	bool operator != (const char* a);
-	bool operator == (const P2String &a) const;
+	bool operator == (const P2String &a)const;
 	bool operator != (const P2String &a);
 	const P2String& operator = (const char* a);
 	const P2String& operator = (const P2String &a);

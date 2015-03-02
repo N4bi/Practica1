@@ -39,16 +39,14 @@ P2String::~P2String()
 bool P2String::operator == (const char* a) const
 {
 	if (string != NULL)
-		return strcmp(string, a) == 0;
-	return false;
-
+		return strcmp(a,string) == 0;
+		
 }
 
 bool P2String::operator != (const char* a)
 {
 	if (string != NULL)
-		return strcmp(string, a) != 0;
-	return true;
+		return strcmp(a,string) != 0;
 }
 
 bool P2String::operator == (const P2String &a) const
@@ -127,11 +125,6 @@ unsigned int P2String::capacity() const
 
 void P2String::clear()
 {
-	if (string != NULL)
-	{
-		memset(string, 0, TMP_STRING_SIZE);
-	}
-
-	memLen = 0;
+	string[0] = '\0';
 }
 

@@ -139,13 +139,66 @@ namespace UnitTest1
 		// Class P2String
 		///////////////////////////////////////////
 
-		TEST_METHOD(testClassString)
+		TEST_METHOD(testStringCharSame)
 		{
-			P2String string1, string2, string3, string4;
+			
+
+			P2String string1("hola");
+			P2String string2("hola");
+
+			Assert::IsFalse(string1.operator == (string2));
+			
+		}
+
+		TEST_METHOD(testStringCharNotSame)
+		{
+			P2String string1("hola");
+			P2String string2("hola");
+
+			Assert::IsTrue(string1.operator != (string2));
+		}
+
+		TEST_METHOD(testStringRefSame)
+		{
+			P2String string1("hola");
+			P2String string2("hola");
+
+			Assert::IsFalse(string1.operator == (string2));
+		}
+
+		TEST_METHOD(testStringRefNotSame)
+		{
+			P2String string1("hola");
+			P2String string2("hola");
+
+			Assert::IsTrue(string1.operator != (string2));
+		}
+
+		/*TEST_METHOD(testStringAddition)
+		{
+			P2String string1("hola");
+			P2String string2("holaa");
 			
 
 
+		}*/
+
+		TEST_METHOD(testStringLength)
+		{
+			P2String string1("hola");
+			string1.length();
+			
+			
 		}
 
+		TEST_METHOD(testStringCapacity)
+		{
+
+		}
+
+		TEST_METHOD(testStringClear)
+		{
+
+		}
 	};
 }
