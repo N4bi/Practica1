@@ -138,6 +138,7 @@ namespace UnitTest1
 		///////////////////////////////////////////
 		// Class P2String
 		///////////////////////////////////////////
+
 		TEST_METHOD(testStringEmpty)
 		{
 			P2String string1;
