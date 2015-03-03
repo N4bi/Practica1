@@ -2,7 +2,8 @@
 #include <string.h>
 #include <assert.h>
 #include "ClassString.h"	
-//FALTAN OPERADORES DE CONCATENACION
+
+//CONCAT. OPERATORS MISSING
 
 
 ///////////////////////
