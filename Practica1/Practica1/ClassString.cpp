@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <assert.h>
-#include "ClassString.h"
+#include "ClassString.h"	
 
 ///////////////////////
 // Constructors
@@ -20,6 +20,13 @@ P2String::P2String(const char* a)
 	string = new char[memLen];
 	strcpy_s(string,memLen, a);
 	
+}
+
+P2String::P2String(const P2String &a)
+{
+	memLen = strlen(a.string) + 1;
+	string = new char[memLen];
+	strcpy_s(string, memLen + 1, a.string);
 }
 
 

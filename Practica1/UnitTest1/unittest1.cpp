@@ -152,6 +152,15 @@ namespace UnitTest1
 			Assert::AreEqual(string1.getString(), "qwerty");
 		}
 
+		TEST_METHOD(testStringRef)
+		{
+			P2String string1("qwerty");
+			P2String string2;
+
+			(string1 == string2);
+
+			Assert::AreEqual(string1.getString(), "qwerty");
+		}
 
 		TEST_METHOD(testStringCharSame)
 		{

@@ -16,6 +16,7 @@ public:
 
 	P2String();
 	P2String(const char* a);
+	P2String(const P2String &a);
 
 	///////////////////////
 	// Destructor
