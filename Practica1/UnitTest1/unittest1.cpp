@@ -138,6 +138,20 @@ namespace UnitTest1
 		///////////////////////////////////////////
 		// Class P2String
 		///////////////////////////////////////////
+		TEST_METHOD(testStringEmpty)
+		{
+			P2String string1;
+
+			Assert::AreEqual(string1.length(), 0);
+		}
+
+		TEST_METHOD(testStringChar)
+		{
+			P2String string1("qwerty");
+
+			Assert::AreEqual(string1.getString(), "qwerty");
+		}
+
 
 		TEST_METHOD(testStringCharSame)
 		{
@@ -153,7 +167,7 @@ namespace UnitTest1
 		TEST_METHOD(testStringCharNotSame)
 		{
 			P2String string1("hola");
-			P2String string2("hola");
+			P2String string2("asdf");
 
 			Assert::IsTrue(string1.operator != (string2));
 		}
@@ -169,7 +183,7 @@ namespace UnitTest1
 		TEST_METHOD(testStringRefNotSame)
 		{
 			P2String string1("hola");
-			P2String string2("hola");
+			P2String string2("asdf");
 
 			Assert::IsTrue(string1.operator != (string2));
 		}
@@ -187,18 +201,24 @@ namespace UnitTest1
 		{
 			P2String string1("hola");
 			string1.length();
+
+			Assert::AreEqual(string1.length(), 4);
 			
 			
 		}
 
 		TEST_METHOD(testStringCapacity)
 		{
-
+			P2String string1("hola");
+			string1.capacity();
+			Assert::AreEqual(string1.capacity(), 4);
 		}
 
 		TEST_METHOD(testStringClear)
 		{
-
+			P2String string1("hola");
+			string1.clear();
+			Assert::AreEqual(string1.length(), 0);
 		}
 	};
 }

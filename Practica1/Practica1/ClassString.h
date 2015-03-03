@@ -6,7 +6,7 @@ class P2String
 {
 private:
 	char* string;
-	unsigned int memLen;
+	int memLen;
 
 public:
 
@@ -40,8 +40,8 @@ public:
 	// Functions
 	///////////////////////
 
-	unsigned int length() const;
-	unsigned int capacity() const;
+	int length() const;
+    int capacity() const;
 	inline char* getString() const {return (string);}
 	void clear();
 

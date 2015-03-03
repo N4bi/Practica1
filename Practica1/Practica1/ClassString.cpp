@@ -39,9 +39,11 @@ P2String::~P2String()
 bool P2String::operator == (const char* a) const
 {
 	if (string != NULL)
-		return strcmp(a,string) == 0;
-		
+	return strcmp(a,string) == 0;
+	
 }
+		
+
 
 bool P2String::operator != (const char* a)
 {
@@ -63,7 +65,8 @@ const P2String& P2String::operator = (const char* a)
 {
 	if (string != NULL)
 	{
-		if (strlen(string) + 1 > memLen)
+		int i = strlen(string) + 1;
+		if (i > memLen)
 		{
 			delete[] string;
 			memLen = strlen(a) + 1;
@@ -83,7 +86,8 @@ const P2String& P2String::operator = (const char* a)
 
 const  P2String& P2String::operator = (const P2String &a)
 {
-	if (a.length() + 1 > memLen)
+	int i = a.length() + 1;
+	if ( i > memLen)
 	{
 		delete[] string;
 		memLen = a.length() + 1;
@@ -113,17 +117,17 @@ const  P2String& P2String::operator = (const P2String &a)
 // Functions
 ///////////////////////
 
-unsigned int P2String::length() const
+	int P2String::length() const
 {
 	return strlen(string);
 }
 
-unsigned int P2String::capacity() const
+    int P2String::capacity() const
 {
-	return(TMP_STRING_SIZE);
+	return (sizeof(memLen));
 }
 
-void P2String::clear()
+	void P2String::clear()
 {
 	string[0] = '\0';
 }
