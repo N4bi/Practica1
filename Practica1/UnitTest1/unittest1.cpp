@@ -229,5 +229,11 @@ namespace UnitTest1
 			string1.clear();
 			Assert::AreEqual(string1.length(), 0);
 		}
+
+		TEST_METHOD(testStringGetString)
+		{
+			P2String string1("hola");
+			Assert::AreEqual(string1.getString(), "hola");
+		}
 	};
 }

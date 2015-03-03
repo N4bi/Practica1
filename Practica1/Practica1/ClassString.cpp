@@ -2,6 +2,8 @@
 #include <string.h>
 #include <assert.h>
 #include "ClassString.h"	
+//FALTAN OPERADORES DE CONCATENACION
+
 
 ///////////////////////
 // Constructors
@@ -107,7 +109,7 @@ const  P2String& P2String::operator = (const P2String &a)
 
 }
 
-/*P2String& P2String::operator += (const char* a)
+/*P2String& P2String::operator += (const char* a)   
 {
 	if (string != NULL)
 	{
@@ -133,6 +135,7 @@ const  P2String& P2String::operator = (const P2String &a)
 {
 	return (sizeof(memLen));
 }
+	
 
 	void P2String::clear()
 {
